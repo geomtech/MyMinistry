@@ -1,0 +1,16 @@
+[Unit]
+Description=uWsgi instance to serve MyMinistry
+After=network.target
+
+[Service]
+User=mycartwitnessing
+Group=www-data
+WorkingDirectory=/opt/MyMinistry/
+Environment="PYENV_ROOT="$HOME/.pyenv"
+Environment="PATH="$PYENV_ROOT/bin:$PATH"
+ExecStart=/home/mycartwitnessing/.pyenv/shims/uwsgi --ini myministry.ini
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

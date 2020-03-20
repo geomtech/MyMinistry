@@ -1,0 +1,8 @@
+.tpl-th {
+    max-width: 205px !important;
+    min-width: 205px !important;
+}
+.tpl-td {
+    min-width: 205px !important;
+    max-width: 205px !important;
+}
